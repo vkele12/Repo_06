@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Deploy Docker image to Google Cloud Run
-      run: echo " HI vishwanath"
+      run: echo " HI vishwanath ttt"
 
   notify:
     needs: build
