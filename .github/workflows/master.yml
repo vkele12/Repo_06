@@ -1,0 +1,23 @@
+name: CI build and notify
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Deploy Docker image to Google Cloud Run
+      run: echo " HI vishwanath"
+
+  notify:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+ 
+      - name: Notify Slack and send eMail
+        run: echo " Email sent to notify 123 "
