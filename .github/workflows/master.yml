@@ -20,4 +20,4 @@ jobs:
       - uses: actions/checkout@v2
  
       - name: Notify Slack and send eMail
-        run: echo " Email sent to notify 1234 rrrr "
+        run: echo " Email sent to notify 1234 rrrr aaa"
