@@ -8,11 +8,11 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
-      name:
+      role_deployment_account_id:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
+        description: 'Account'
         # Default value if no value is explicitly provided
-        default: 'World'
+        #default: 'World'
         # Input has to be provided for the workflow to run
         required: true
         # The data type of the input
@@ -27,6 +27,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - uses: actions/checkout@v3
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+      #run: echo "Hello ${{ inputs.name }}"
+      env:
+        varname : "${{ github.event.inputs.role_deployment_account_id }}"
