@@ -30,6 +30,6 @@ jobs:
     - uses: actions/checkout@v3
     # Runs a single command using the runners shell
     - name: Send greeting
-      #run: echo "Hello ${{ inputs.name }}"
-      env:
-        varname : "${{ github.event.inputs.role_deployment_account_id }}"
+      run: echo "Hello ${{ inputs.role_deployment_account_id }}"
+      #env:
+       # varname : "${{ github.event.inputs.role_deployment_account_id }}"
